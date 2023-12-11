@@ -1,8 +1,11 @@
 def write_file(file_name, file_content):
-    pass
+    with open(f"{file_name}.txt", mode="w", encoding="utf-8") as file1:
+        file1.write(file_content)
 
 def append_file(file_name, append_content):
-    pass
+    with open(f"{file_name}.txt", "a") as file:
+        file.write(append_content)
 
 def read_file(file_name):
-    pass
+    with open(f"{file_name}.txt") as file:
+        return file.read()
